@@ -1,0 +1,55 @@
+:root {
+  /* Light theme variables */
+  --primary-color: #2563eb;
+  --primary-color-dark: #1d4ed8;
+  --background-primary: #ffffff;
+  --background-secondary: #f8fafc;
+  --background-input: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --message-user-bg: #2563eb;
+  --message-ai-bg: #f1f5f9;
+  --hover-color: rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables - enhanced for better contrast and readability */
+  --primary-color: #3b82f6;
+  --primary-color-dark: #2563eb;
+  --background-primary: #0f172a;
+  --background-secondary: #1e293b;
+  --background-input: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --message-user-bg: #3b82f6;
+  --message-ai-bg: #1e293b;
+  --hover-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Enhanced transitions */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

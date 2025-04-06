@@ -1,0 +1,116 @@
+.message-bubble {
+  max-width: 70%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-bubble.ai {
+  align-self: flex-start;
+}
+
+.message-content {
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  position: relative;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  min-width: 200px;
+  line-height: 1.5;
+}
+
+.message-bubble.user .message-content {
+  background-color: var(--message-user-bg);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble.ai .message-content {
+  background-color: var(--message-ai-bg);
+  border-bottom-left-radius: 4px;
+}
+
+/* Enhanced sentiment-based styling for dark mode */
+.message-bubble.friendly .message-content { 
+  border-left: 3px solid #22c55e;
+  background-image: linear-gradient(to right, rgba(34, 197, 94, 0.1), transparent);
+}
+.message-bubble.supportive .message-content { 
+  border-left: 3px solid #3b82f6;
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.1), transparent);
+}
+.message-bubble.informative .message-content { 
+  border-left: 3px solid #f59e0b;
+  background-image: linear-gradient(to right, rgba(245, 158, 11, 0.1), transparent);
+}
+.message-bubble.neutral .message-content { 
+  border-left: 3px solid #64748b;
+  background-image: linear-gradient(to right, rgba(100, 116, 139, 0.1), transparent);
+}
+
+.message-preview {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.message-preview:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.message-preview.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message-preview a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.message-preview a:hover {
+  text-decoration: underline;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  display: block;
+  color: var(--text-secondary);
+} 

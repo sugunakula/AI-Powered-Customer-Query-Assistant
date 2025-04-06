@@ -1,0 +1,18 @@
+.theme-toggle {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-input);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--background-secondary);
+}
+
+.theme-toggle-icon {
+  font-size: 1.125rem;
+  line-height: 1;
+} 
