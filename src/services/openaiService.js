@@ -26,13 +26,14 @@ const extractOrderId = (message) => {
 
 export const generateAIResponse = async (message, products, orders) => {
   try {
-    // Get the API key from localStorage
+    // Get the API key from environment variable
     const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
     
     if (!apiKey) {
       console.error('OpenAI API key not found in environment variables');
       throw new Error('API key configuration error. Please contact support.');
     }
+
     // Create knowledge base strings
     const productKnowledge = products.map(p => 
       `Product: ${p.name}
