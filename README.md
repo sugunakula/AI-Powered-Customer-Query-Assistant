@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# AI-Powered Customer Query Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📋 Overview
+An AI-driven customer query assistant built with React.js, designed to handle customer questions intelligently using integrated AI services like OpenAI. It provides a user-friendly chat interface that simulates real-time customer support.
 
-## Available Scripts
+## 🚀 Features
+- 🧠 AI-powered response generation
+- 💬 Real-time chat interface
+- ⚡ Organized service layer for product, order, and refund queries
+- 🎯 Context API and custom hooks for state management
+- 🎨 Modern and customizable styling
+- 📦 Scalable and clean code structure
 
-In the project directory, you can run:
+## 🛠️ Tech Stack
+- React.js
+- JavaScript / TypeScript
+- OpenAI API
+- CSS Modules
 
-### `npm start`
+## 📂 Project Structure
+```
+├── public/               # Static files
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── containers/       # Page-level components
+│   ├── contexts/         # Context API for state management
+│   ├── hooks/            # Custom React hooks
+│   ├── services/         # API interaction services
+│       ├── aiService.js
+│       ├── aiService.ts
+│       ├── openaiService.js
+│       ├── orderService.js
+│       ├── productService.js
+│       ├── refundService.js
+│   ├── styles/           # CSS styles
+│       ├── Auth.css
+│       ├── ChatInterface.css
+│   ├── types/            # TypeScript types
+│   ├── App.js            # Main app component
+│   ├── App.test.js       # Unit tests
+│   ├── index.js          # Entry point
+│   ├── index.css         # Global styles
+├── package.json          # Project configuration
+└── README.md             # Project documentation
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Setup Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sugunakula/AI-Powered-Customer-Query-Assistant.git
+cd AI-Powered-Customer-Query-Assistant
+```
 
-### `npm test`
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Configure Environment Variables
+Create a `.env` file at the root and add your OpenAI API key:
+```
+REACT_APP_OPENAI_API_KEY=your_openai_api_key
+```
 
-### `npm run build`
+### 4. Start the Development Server
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 5. Build for Production
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💡 Usage
+1. Navigate to the chat interface
+2. Type customer queries in the input field
+3. Receive AI-generated responses based on the query context
+4. Access order history, product information, and refund policies through natural language
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔒 Security Considerations
+- API keys are stored securely in environment variables
+- User data is handled according to privacy best practices
+- Rate limiting implemented to prevent API abuse
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
