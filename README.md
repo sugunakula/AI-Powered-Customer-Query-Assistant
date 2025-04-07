@@ -1,4 +1,3 @@
-# AI-Powered Customer Query Assistant
 
 ## 📋 Overview
 An AI-driven customer query assistant built with React.js, designed to handle customer questions intelligently using integrated AI services like OpenAI. It provides a user-friendly chat interface that simulates real-time customer support.
